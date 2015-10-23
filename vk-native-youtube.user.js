@@ -9,7 +9,7 @@
 // @include     https://vk.com/*
 // @match       http://vk.com/*
 // @match       https://vk.com/*
-// @update      https://github.com/nokeya/vk-native-youtube/vk-native-youtube.user.js
+// @update      https://github.com/nokeya/vk-native-youtube/raw/master/vk-native-youtube.user.js
 // @version     1.0
 // @grant       none
 // ==/UserScript==
