@@ -1,8 +1,8 @@
 # vk-native-youtube
 UserScript changing youtube videos interface back to original one
 
-Before:
+Before:  
 ![](before.gif)
 
-After:
+After:  
 ![](after.gif)
