@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name        Native Youtube interface for VK.com
-// @name:ru     Родной интерфейс ютуба ВКонтакте
+// @name:ru     Р РѕРґРЅРѕР№ РёРЅС‚РµСЂС„РµР№СЃ СЋС‚СѓР±Р° Р’РљРѕРЅС‚Р°РєС‚Рµ
 // @description Changes user interface for youtube videos to native instead of default one
-// @description:ru  Возвращает элементы управления видео к их оригинальному виду
+// @description:ru  Р’РѕР·РІСЂР°С‰Р°РµС‚ СЌР»РµРјРµРЅС‚С‹ СѓРїСЂР°РІР»РµРЅРёСЏ РІРёРґРµРѕ Рє РёС… РѕСЂРёРіРёРЅР°Р»СЊРЅРѕРјСѓ РІРёРґСѓ
 // @namespace   https://github.com/nokeya
 // @domain      vk.com
 // @include     http://vk.com/*
@@ -14,28 +14,29 @@
 // @grant       none
 // ==/UserScript==
 function enableControls() {
-    // native youtube UI
-    var vid = document.getElementById('video_yt_player');
-    if (vid != null) {
-        if (vid.src.indexOf('controls=0') != -1) // enable user interface
-        {
-            vid.src = vid.src.replace('controls=0', 'controls=1');
-        }
-        if (!vid.hasAttribute('allowfullscreen')) // enable fullscreen mode
-        {
-            vid.setAttribute('allowfullscreen', '1');
-        }
-        if (vid.src.indexOf('fs=0') != -1) // enable fullscreen button
-        {
-            vid.src = vid.src.replace('fs=0', 'fs=1');
-        }
+  // native youtube UI
+  var vid = document.getElementById('video_yt_player');
+  if (vid != null) {
+    if (vid.src.indexOf('controls=0') != - 1) // enable user interface
+    {
+      vid.src = vid.src.replace('controls=0', 'controls=1');
     }
-    // remove VK user interface
+    if (!vid.hasAttribute('allowfullscreen')) // enable fullscreen mode
+    {
+      vid.setAttribute('allowfullscreen', '1');
+    }
+    if (vid.src.indexOf('fs=0') != - 1) // enable fullscreen button
+    {
+      vid.src = vid.src.replace('fs=0', 'fs=1');
+    }
+  }
+  // remove VK user interface
 
-    var vkui = document.getElementById('video_yt_ui');
-    if (vkui != null) {
-        vkui.parentNode.removeChild(vkui);
-    }
+  var vkui = document.getElementById('video_yt_ui');
+  if (vkui != null)
+  {
+    vkui.parentNode.removeChild(vkui);
+  }
 }
 document.addEventListener('DOMNodeInserted', enableControls, true);
 enableControls();
