@@ -10,6 +10,7 @@
 // @match       http://vk.com/*
 // @match       https://vk.com/*
 // @update      https://github.com/nokeya/vk-native-youtube/raw/master/vk-native-youtube.user.js
+// @icon        https://raw.githubusercontent.com/nokeya/vk-native-youtube/master/logo.png
 // @version     1.0
 // @grant       none
 // ==/UserScript==
